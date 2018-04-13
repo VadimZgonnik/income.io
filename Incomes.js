@@ -33,24 +33,11 @@ export class Incomes extends Component {
 
         return (
             <View>
-                <ScrollView keyboardDismissMode="interactive">
-                    <Text>Внести доход:</Text>
-                    <TextInput
-                        style={{
-                            padding: 10,
-                            paddingTop: 50,
-                        }}
-                        inputAccessoryViewID={inputAccessoryViewID}
-                        onChangeText={text => this.setState({text})}
-                        value={this.state.text}
-                    />
-                </ScrollView>
-                <InputAccessoryView nativeID={inputAccessoryViewID}>
-                    <Button
-                        onPress={() => this.setState({text: 'Placeholder Text'})}
-                        title="Reset Text"
-                    />
-                </InputAccessoryView>
+                <TextInput
+                    style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+                    onChangeText={(text) => this.setState({text})}
+                    value={this.state.text}
+                />
             </View>
         );
     }
